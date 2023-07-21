@@ -38,7 +38,7 @@ app.post('/createOrder', (req, res) => {
       "pending": "https://entrega-final-altamura.vercel.app/"
     },
     "auto_return": "approved",
-    notification_url: "https://7ecc-2800-810-496-db9-fd1e-b52e-f613-65b6.ngrok-free.app/notifications",
+    notification_url: "https://www.encrypted-chat-backend.online/notifications",
 
     items: itemsHandled
   };
