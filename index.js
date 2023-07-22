@@ -1,3 +1,5 @@
+const fs = require('fs');
+const https = require('https');
 const express = require("express");
 const mercadopago = require('mercadopago');
 const cors = require('cors');
