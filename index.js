@@ -5,12 +5,16 @@ const cors = require('cors');
 const app = express();
 const port = 5000;
 
+const options = {
+  key: fs.readFileSync('/etc/cert/privkey.pem'),
+  cert: fs.readFileSync('/etc/cert/cert.pem')
+};
+
 app.use(express.json());
 app.use(cors());
 
 app.post('/notifications', (req, res) => {
-  console.log("-----------")
-  
+  console.log("-----------")  
     
 });
 
@@ -60,8 +64,10 @@ app.get('/', function (req, res) {
 //     });
 // });
 
-app.listen(port, () => {
-  console.log(`Servidor escuchando en el puerto ${port}`);
+const server = https.createServer(options, app);
+
+server.listen(port, () => {
+  console.log(`Servidor HTTPS escuchando en el puerto ${port}`);
 });
 
 
