@@ -22,12 +22,8 @@ app.post('/notifications', (req, res) => {
 
 app.options('/createOrder', cors())
 
-app.get('/', (req, res)=>{
-  res.send("funciona")
-})
-
-// app.post('/createOrder', (req, res) => {
-//   res.status(200)
+app.post('/createOrder', (req, res) => {
+  res.send("funciona post")
   // console.log("body", req.body.items)
 
   // const items = req.body.items
@@ -64,7 +60,7 @@ app.get('/', (req, res)=>{
   //     console.log(error);
   //     res.sendStatus(500);
   //   });
-// });
+});
 
 const server = https.createServer(options, app);
 
