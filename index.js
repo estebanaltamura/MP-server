@@ -14,6 +14,10 @@ app.post('/notifications', (req, res) => {
     
 });
 
+app.get('/', function (req, res) {
+  res.send('Hello World!')
+})
+
 app.options('/createOrder', cors())
 
 app.post('/createOrder', (req, res) => {
