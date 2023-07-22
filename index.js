@@ -23,7 +23,7 @@ app.post('/notifications', (req, res) => {
 app.options('/createOrder', cors())
 
 app.post('/createOrder', (req, res) => {
-  res.send(200)
+  res.status(200)
   console.log("body", req.body.items)
 
   const items = req.body.items
