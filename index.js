@@ -9,9 +9,9 @@ app.use(express.json());
 app.use(cors());
 
 app.post('/notifications', (req, res) => {
-  console.log("------------------")
-  console.log(req.body);
+  console.log("-----------")
   
+    
 });
 
 app.options('/createOrder', cors())
@@ -21,9 +21,10 @@ app.post('/createOrder', (req, res) => {
   console.log("body", req.body.items)
 
   const items = req.body.items
+  
   const itemsHandled = items.map((item)=>({"id": Math.round(Math.random(),2), "title": item.name, "unit_price": item.price, "quantity": item.quantity, currency_id: "ARS", "picture_url": item.images[0]}))
 
-  //console.log(itemsHandled)
+  console.log(itemsHandled)
 
   // Agrega credenciales
   mercadopago.configure({
