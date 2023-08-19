@@ -25,7 +25,7 @@ app.post('/createOrder', (req, res) => {
   const itemsHandled = items.map((item)=>({"id": Math.round(Math.random(),2), "title": item.name, "unit_price": item.price, "quantity": item.quantity, currency_id: "ARS", "picture_url": item.images[0]}))
   
   mercadopago.configure({
-    access_token: 'TEST-6329496204948801-071110-6ce629584c6dbe109aea60144d5d3830-1421065886'
+    access_token: 'TEST-3355990679256381-071110-38d56cd52fb2a05c5f934b421e419c33-13941450'
   });
   
   let preference = { 
