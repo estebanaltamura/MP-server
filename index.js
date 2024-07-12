@@ -10,6 +10,11 @@ const port = 5000;
 app.use(express.json());
 app.use(cors());
 
+// Ruta GET simple para probar el servidor
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
 app.post('/notifications', (req, res) => {
   console.log("-----------")  
     
