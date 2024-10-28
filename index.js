@@ -30,12 +30,12 @@ app.post('/createOrder', (req, res) => {
   
   let preference = { 
     "back_urls": {
-      "success": "https://entrega-final-altamura.vercel.app/",
-      "failure": "https://entrega-final-altamura.vercel.app/",
-      "pending": "https://entrega-final-altamura.vercel.app/"
+      "success": "https://www.pandora-backpacks.xyz/",
+      "failure": "https://www.pandora-backpacks.xyz/",
+      "pending": "https://www.pandora-backpacks.xyz/"
     },
     "auto_return": "approved",
-    notification_url: "https://www.encrypted-chat-backend.online/notifications",
+    notification_url: "https://internal-server-projects.xyz/notifications",
 
     items: itemsHandled
   };
